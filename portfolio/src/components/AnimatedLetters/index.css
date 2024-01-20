@@ -1,0 +1,51 @@
+.text-animate {
+    display: inline-block;
+     opacity: 0;
+    position: relative;
+    text-shadow: 4px 6px 6px#02403d;
+    transform: rotate(100deg) scale(0);
+    animation: textAnim 0.5s ;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    left: -50px;
+    bottom: -50px;
+    white-space: pre-wrap;
+}
+@keyframes textAnim {
+    100%{
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+        left: 0;
+        bottom: 0;
+
+    }
+}
+
+.text-animate-hover{
+    min-width: 10px;
+        display: inline-block;
+        animation-fill-mode: both;
+}
+/* .text-animate-hover {
+     min-width: 10px;
+     display: inline-block;
+     animation-fill-mode: both;
+     &:hover {
+        animation: rubberBand 1s;
+         color: #ffd700;
+    }
+ } */
+@keyframes rubberBand {
+    0%{
+        transform: scale3d(1,1,1);
+    }
+    35% {
+            transform: scale3d(1.25, .75, 1);
+        }
+    45% {
+        transform: scale3d(.75, 1, 1);
+        }
+    60% {
+        transform: scale3d(1.25, .8, 1);
+        }
+}
