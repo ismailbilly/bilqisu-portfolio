@@ -9,3 +9,5 @@ export default defineConfig({
   pluginRewriteAll()
   ],
 })
+
+//"sass": "^1.63.6",
